@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let number = parseInt(prompt("Nhập số cần check "));//khai báo biến,chuyển chuỗi về thành số
+  isPrime(number)//tên hàm và có giá trị là number
+
+  function isPrime(number){//khai báo hàm
+    let count = 0; // đếm số ước của số đang check
+    let isPrime = false;//gán cho hàm mặc định là sai
+
+    if (number === 0) {//xét điều kiện cho giá trị của hàm = 0 thì?
+      alert(number + " không là số nguyên tố")//hiển thị kết quả
+    } else {//nếu không thì ...=>
+      for ( let i = 1; i <= number; i++) {//mở vòng lặp ,tạo một biến và cho biến đấy <= giá trị của hàm
+        if(number % i === 0) {//xét điều kiện nếu số ấy chia hết cho i = 0 thì?
+          count += 1;//biến đếm tăng =>>
+        }
+      }
+      if (count === 2 ) {//lại xét điều kiện lần 2 để hiển thị ra có phải là số NT hay không?
+        isPrime = true//gán cho hàm = đúng
+        alert(number + " là số nguyên tố")//đúng thì hiển thị ra màn hình là SNT
+      }else {//thì sai =>
+        alert (number + " không là số nguyên tố")// hiển thị ra màn hình không phải là SNT
+      }
+    }
+  }
+</script>
+</body>
+</html>
